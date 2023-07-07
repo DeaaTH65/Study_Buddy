@@ -3,8 +3,8 @@ from django.shortcuts import render
 
 
 def home(request):
-    pass
+    return render(request, 'base/home.html')
 
 
 def room(request):
-    pass
+    return render(request, 'base/room.html')
