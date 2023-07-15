@@ -46,9 +46,8 @@ def registerPage(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid:
-            user = form.save()
-            login(request, user)
-            return redirect('home')
+            form.save()
+            return redirect('login')
         else:
             messages.error(request, 'An error occured during registration')
             

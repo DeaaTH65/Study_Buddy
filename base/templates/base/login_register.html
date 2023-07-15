@@ -18,7 +18,7 @@
               {% csrf_token %}
               <div class="form__group form__group">
                 <label for="room_name">Username</label>
-                <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
+                <input id="username" name="username" type="text" placeholder="e.g. deaath" />
               </div>
               <div class="form__group">
                 <label for="password">Password</label>
@@ -70,19 +70,13 @@
             <h2 class="auth__tagline">Find your study partner</h2>
 
             <form class="form" action="" method="POST">
+              {% csrf_token %}
+              {% for field in form %}
               <div class="form__group form__group">
-                <label for="room_name">Username</label>
-                <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
+                <label for="room_name">{{field.label}}</label>
+                {{field}}
               </div>
-              <div class="form__group">
-                <label for="password">Password</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
-                />
-              </div>
+              {% endfor %}
 
               <button class="btn btn--main" type="submit">
                 <svg
@@ -101,7 +95,7 @@
                   ></path>
                 </svg>
 
-                Login
+                Register
               </button>
             </form>
 
