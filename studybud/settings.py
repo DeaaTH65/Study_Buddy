@@ -61,6 +61,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'studybud.wsgi.application'
 
+AUTH_USER_MODEL = 'base.User'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
