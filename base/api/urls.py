@@ -7,4 +7,6 @@ urlpatterns = [
     path('rooms/<str:pk>/', views.getRoom),
     path('topics/', views.getTopics),
     path('topics/<str:pk>/', views.getTopic),
+    path('users/', views.getUsers),
+    path('users/<str:pk>/', views.getUser),
 ]
